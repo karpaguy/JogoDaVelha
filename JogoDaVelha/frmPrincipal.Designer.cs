@@ -43,6 +43,15 @@ namespace JogoDaVelha
             this.btn3x3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblContador = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblReset = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -170,17 +179,93 @@ namespace JogoDaVelha
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(217, 348);
+            this.label1.Location = new System.Drawing.Point(199, 389);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 13;
-            this.label1.Text = "label1";
+            this.label1.Text = "ZERADO";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(154, 372);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(150, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "SITUAÇÃO ATUAL DO JOGO";
+            // 
+            // lblContador
+            // 
+            this.lblContador.AutoSize = true;
+            this.lblContador.Location = new System.Drawing.Point(400, 384);
+            this.lblContador.Name = "lblContador";
+            this.lblContador.Size = new System.Drawing.Size(13, 13);
+            this.lblContador.TabIndex = 15;
+            this.lblContador.Text = "0";
+            this.lblContador.Click += new System.EventHandler(this.lblContador_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(343, 384);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "TURNOS:";
+            // 
+            // lblReset
+            // 
+            this.lblReset.Location = new System.Drawing.Point(28, 379);
+            this.lblReset.Name = "lblReset";
+            this.lblReset.Size = new System.Drawing.Size(100, 23);
+            this.lblReset.TabIndex = 17;
+            this.lblReset.Text = "RESETAR";
+            this.lblReset.UseVisualStyleBackColor = true;
+            this.lblReset.Click += new System.EventHandler(this.lblReset_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::JogoDaVelha.Properties.Resources.unnamed;
+            this.pictureBox2.Location = new System.Drawing.Point(444, 56);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(456, 332);
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::JogoDaVelha.Properties.Resources.Capturar;
+            this.pictureBox1.Location = new System.Drawing.Point(444, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(456, 351);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(600, 384);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Velha Trigger Mode";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 378);
+            this.ClientSize = new System.Drawing.Size(924, 414);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblReset);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblContador);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn3x3);
             this.Controls.Add(this.btn3x2);
@@ -197,6 +282,8 @@ namespace JogoDaVelha
             this.Controls.Add(this.panel1);
             this.Name = "frmPrincipal";
             this.Text = "Jogo da Velha";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,6 +305,13 @@ namespace JogoDaVelha
         private System.Windows.Forms.Button btn3x3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblContador;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button lblReset;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
